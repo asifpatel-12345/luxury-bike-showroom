@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCITY LUXE | Hyper & Superbike Showroom</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gauge-high logo-icon"></i>
+            <span>VELOCITY<span class="highlight">LUXE</span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#showroom">Showroom</a>
+            <a href="#featured">Featured</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="icon-btn" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="#showroom" class="btn btn-primary">Explore Fleet</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">UNLEASH THE BEAST</span>
+            <h1>EXPERIENCE THE <span class="gradient-text">ULTIMATE SPEED</span> & LUXURY</h1>
+            <p>Explore the world's most elite hyperbikes, track beasts, and luxury cruisers. Precision engineering meets raw power.</p>
+            <div class="hero-btns">
+                <a href="#showroom" class="btn btn-primary"><i class="fa-solid fa-motorcycle"></i> View Collection</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-calendar-check"></i> Book Test Ride</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">400+</span>
+                    <span class="stat-label">KM/H Top Speed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Flagship Beasts</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Adrenaline Pure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showroom & Search Section -->
+    <section id="showroom" class="showroom-section">
+        <div class="section-title">
+            <h2>OUR <span class="gradient-text">HYPER FLEET</span></h2>
+            <p>Select your dream machine from our premier flagship inventory.</p>
+        </div>
+
+        <!-- Controls: Search & Category Filters -->
+        <div class="controls-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search by model, brand (e.g. Ninja H2R, BMW)...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Bikes</button>
+                <button class="filter-btn" data-filter="hyperbike">Hyperbikes</button>
+                <button class="filter-btn" data-filter="superbike">Superbikes</button>
+                <button class="filter-btn" data-filter="naked">Naked/Street</button>
+                <button class="filter-btn" data-filter="cruiser">Cruiser</button>
+            </div>
+        </div>
+
+        <!-- Bikes Grid -->
+        <div class="bikes-grid" id="bikes-grid">
+            <!-- Dynamic Bike Cards Rendered via JS -->
+        </div>
+    </section>
+
+    <!-- Featured Experience / Stats Section -->
+    <section id="featured" class="featured-banner">
+        <div class="banner-content">
+            <h2>READY TO DOMAINATE THE ROAD?</h2>
+            <p>Custom tuning, official warranty, personalized delivery, and exclusive track-day passes included with every hyperbike purchase.</p>
+            <a href="#contact" class="btn btn-primary">Schedule VIP Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="badge">WHO WE ARE</span>
+                <h2>DEFINING THE FUTURE OF <span class="gradient-text">TWO-WHEEL LUXURY</span></h2>
+                <p>Velocity Luxe is the premier destination for motorcycle enthusiasts and collectors. We curate only the most powerful, exclusive, and technologically advanced motorcycles in the world.</p>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-shield-halved"></i> Official Manufacturer Warranty & Certified Service</li>
+                    <li><i class="fa-solid fa-truck-fast"></i> Enclosed White-Glove Doorstep Delivery</li>
+                    <li><i class="fa-solid fa-wrench"></i> Custom Carbon & Performance Upgrades</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Showroom Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <h2>BOOK A <span class="gradient-text">TEST RIDE / INQUIRY</span></h2>
+            <p>Get in touch with our specialist team or reserve your test track session.</p>
+        </div>
+        <form class="contact-form" id="booking-form">
+            <div class="form-group">
+                <input type="text" id="user-name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="user-email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <select id="selected-bike" required>
+                    <option value="" disabled selected>Select Bike Model</option>
+                    <option value="Kawasaki Ninja H2R">Kawasaki Ninja H2R</option>
+                    <option value="BMW S1000RR M Package">BMW S1000RR M Package</option>
+                    <option value="Ducati Panigale V4 R">Ducati Panigale V4 R</option>
+                    <option value="TVS Apache RR310 BTO">TVS Apache RR310 BTO</option>
+                    <option value="Yamaha YZF-R1M">Yamaha YZF-R1M</option>
+                    <option value="Kawasaki Z H2">Kawasaki Z H2 (Naked)</option>
+                    <option value="Ducati Streetfighter V4 SP2">Ducati Streetfighter V4 SP2</option>
+                    <option value="Suzuki Hayabusa 1300">Suzuki Hayabusa 1300</option>
+                    <option value="BMW R1250 GS Adventure">BMW R1250 GS Adventure</option>
+                    <option value="Harley-Davidson CVO Street Glide">Harley-Davidson CVO Street Glide</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea id="user-message" rows="4" placeholder="Your Message or Preferred Test Ride Date"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Submit VIP Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-gauge-high logo-icon"></i>
+                    <span>VELOCITY<span class="highlight">LUXE</span></span>
+                </div>
+                <p>The ultimate showroom for hyperbikes and luxury motorcycles.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#showroom">Showroom</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="footer-socials">
+                <h4>Follow Velocity</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VELOCITY LUXE. Built with Passion for High-Speed Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Bike Specs Modal -->
+    <div class="modal" id="bike-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Dynamic Content Loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
